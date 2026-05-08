@@ -106,6 +106,6 @@ Tem um projeto, ideia ou quer trocar uma ideia?
 
 <div align="center">
 
-Feito com ❤️ e muito café — © 2026 Luana Paes. Todos os direitos reservados.
+Feito com ❤️ — © 2026 Luana Paes. Todos os direitos reservados.
 
 </div>
