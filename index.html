@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luana Paes — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio de Luana Paes, desenvolvedora frontend apaixonada por design acessível e inclusivo."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <header class="navbar" role="banner">
+      <div class="nav-inner">
+        <a href="#hero" class="logo" aria-label="Início">
+          <span class="logo-l">L</span><span class="logo-dot">.</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a href="#stacks" data-i18n="nav.stacks">Stacks</a>
+          <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+          <a href="#contato" data-i18n="nav.contact">Contato</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Language toggle -->
+          <button class="lang-toggle" id="langToggle" aria-label="Mudar idioma">
+            <span class="lang-active" id="langLabel">PT</span>
+            <i class="fa-solid fa-globe"></i>
+          </button>
+
+          <!-- Theme toggle -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Alternar modo claro/escuro"
+          >
+            <i class="fa-solid fa-sun" id="themeIcon"></i>
+          </button>
+
+          <!-- Currículo -->
+          <a
+            href="curriculo.pdf"
+            target="_blank"
+            class="btn-cv"
+            aria-label="Ver currículo"
+            data-i18n="nav.cv"
+          >
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Currículo</span>
+          </a>
+
+          <!-- Hamburger -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#stacks" data-i18n="nav.stacks">Stacks</a>
+        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#contato" data-i18n="nav.contact">Contato</a>
+        <a
+          href="curriculo.html"
+          target="_blank"
+          class="mobile-cv"
+          data-i18n="nav.cv"
+        >
+          <i class="fa-solid fa-file-lines"></i> Currículo
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+      <section id="hero" class="hero" aria-label="Apresentação">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p
+              class="hero-eyebrow animate-in"
+              data-delay="0"
+              data-i18n="hero.eyebrow"
+            >
+              Frontend Developer · Designer
+            </p>
+            <h1 class="hero-title animate-in" data-delay="1">
+              <span class="hero-name-line">Luana</span>
+              <span class="hero-name-line italic">Paes</span>
+            </h1>
+            <p
+              class="hero-desc animate-in"
+              data-delay="2"
+              data-i18n="hero.desc"
+            >
+              Criando experiências digitais <em>acessíveis</em>,
+              <em>inclusivas</em> e visualmente marcantes — onde código encontra
+              design com propósito.
+            </p>
+            <div class="hero-ctas animate-in" data-delay="3">
+              <a href="#projetos" class="btn-primary" data-i18n="hero.cta1"
+                >Ver Projetos</a
+              >
+              <a href="#contato" class="btn-ghost" data-i18n="hero.cta2"
+                >Fale comigo</a
+              >
+            </div>
+
+            <div
+              class="hero-social animate-in"
+              data-delay="4"
+              aria-label="Redes sociais"
+            >
+              <a
+                href="https://github.com/luanagpaes"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/luana-paes-bba22a321/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/luagabrielleg/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-photo animate-in" data-delay="2" aria-hidden="true">
+            <div class="photo-frame">
+              <div class="photo-placeholder">
+                <img
+                  src="luana.jpg"
+                  alt="Foto de Luana Paes"
+                  class="photo-img"
+                />
+              </div>
+              <div class="photo-ring photo-ring-1"></div>
+              <div class="photo-ring photo-ring-2"></div>
+              <div class="photo-accent"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-hint animate-in" data-delay="5" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span data-i18n="hero.scroll">scroll</span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ SOBRE ═══════════════════════════════ -->
+      <section id="sobre" class="sobre section" aria-labelledby="sobre-title">
+        <div class="container">
+          <div class="section-label" data-i18n="about.label">// Sobre mim</div>
+
+          <div class="sobre-grid">
+            <div class="sobre-left">
+              <h2 id="sobre-title" class="section-title reveal">
+                <span data-i18n="about.title1">Design com</span><br />
+                <em data-i18n="about.title2">propósito.</em>
+              </h2>
+
+              <div class="sobre-tags reveal" aria-label="Interesses">
+                <span class="tag"
+                  ><i class="fa-solid fa-universal-access"></i>
+                  <span data-i18n="tag.access">Acessibilidade</span></span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-palette"></i>
+                  <span data-i18n="tag.color">Colorimetria</span></span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-users"></i>
+                  <span data-i18n="tag.inclusive">Design Inclusivo</span></span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-code"></i> Frontend</span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-pen-ruler"></i> UI/UX</span
+                >
+              </div>
+            </div>
+
+            <div class="sobre-right reveal">
+              <p class="sobre-text" data-i18n="about.p1">
+                Olá! Sou a Luana — desenvolvedora frontend e apaixonada pela
+                interseção entre código e design. Acredito que a tecnologia deve
+                ser para <strong>todos</strong>, e isso guia cada projeto que
+                toco.
+              </p>
+              <p class="sobre-text" data-i18n="about.p2">
+                Me dedico a estudar
+                <strong>acessibilidade digital e design inclusivo</strong>,
+                garantindo que sistemas sejam utilizáveis por pessoas com
+                diferentes necessidades e realidades. A
+                <strong>colorimetria</strong> também é uma das minhas paixões —
+                entender como as cores comunicam emoções e constroem identidades
+                visuais.
+              </p>
+              <p class="sobre-text" data-i18n="about.p3">
+                Cada detalhe importa — tipografia, espaçamento, contraste,
+                hierarquia visual.
+              </p>
+
+              <div class="sobre-stats" aria-label="Estatísticas">
+                <div class="stat">
+                  <span class="stat-num">10+</span>
+                  <span class="stat-label" data-i18n="stat.tools"
+                    >Ferramentas</span
+                  >
+                </div>
+                <div class="stat">
+                  <span class="stat-num">∞</span>
+                  <span class="stat-label" data-i18n="stat.curiosity"
+                    >Curiosidade</span
+                  >
+                </div>
+                <div class="stat">
+                  <span class="stat-num">100%</span>
+                  <span class="stat-label" data-i18n="stat.dedication"
+                    >Dedicação</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ STACKS ═══════════════════════════════ -->
+      <section
+        id="stacks"
+        class="stacks section"
+        aria-labelledby="stacks-title"
+      >
+        <div class="container">
+          <div class="section-label" data-i18n="stacks.label">
+            // Stacks & Ferramentas
+          </div>
+          <h2
+            id="stacks-title"
+            class="section-title reveal"
+            data-i18n="stacks.title"
+          >
+            Meu Arsenal
+          </h2>
+
+          <div class="stacks-grid">
+            <!-- Frontend -->
+            <div class="stack-card reveal" data-group="frontend">
+              <div class="stack-card-header">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3 data-i18n="stacks.frontend">Frontend</h3>
+              </div>
+              <div class="stack-items">
+                <div class="stack-item" data-tooltip="HTML5">
+                  <div class="stack-icon html">
+                    <i class="fa-brands fa-html5"></i>
+                  </div>
+                  <span>HTML5</span>
+                </div>
+                <div class="stack-item" data-tooltip="CSS3">
+                  <div class="stack-icon css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                  </div>
+                  <span>CSS3</span>
+                </div>
+                <div class="stack-item" data-tooltip="JavaScript">
+                  <div class="stack-icon js">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <span>JavaScript</span>
+                </div>
+                <div class="stack-item" data-tooltip="React">
+                  <div class="stack-icon react">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <span>React</span>
+                </div>
+                <div class="stack-item" data-tooltip="Tailwind CSS">
+                  <div class="stack-icon tailwind">
+                    <svg
+                      viewBox="0 0 32 32"
+                      fill="currentColor"
+                      width="28"
+                      height="28"
+                    >
+                      <path
+                        d="M9 13.7q1.4-5.6 7-5.6c3.5 0 5.4 1.75 5.6 5.25.14 2.1-.7 4.55-2.45 7.35C17.5 23.45 15.75 25 13.65 25c-2.1 0-3.15-1.4-3.15-4.2 0-.7.07-1.4.21-2.1L9 13.7zm7 0q-1.4 5.6-7 5.6c-3.5 0-5.4-1.75-5.6-5.25-.14-2.1.7-4.55 2.45-7.35C7.5 4.55 9.25 3 11.35 3c2.1 0 3.15 1.4 3.15 4.2 0 .7-.07 1.4-.21 2.1L16 13.7z"
+                      />
+                    </svg>
+                  </div>
+                  <span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Banco de Dados -->
+            <div class="stack-card reveal" data-group="database">
+              <div class="stack-card-header">
+                <i class="fa-solid fa-database"></i>
+                <h3 data-i18n="stacks.database">Banco de Dados</h3>
+              </div>
+              <div class="stack-items">
+                <div class="stack-item" data-tooltip="MySQL">
+                  <div class="stack-icon mysql">
+                    <i class="fa-solid fa-database"></i>
+                  </div>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Design -->
+            <div class="stack-card reveal" data-group="design">
+              <div class="stack-card-header">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h3 data-i18n="stacks.design">Design</h3>
+              </div>
+              <div class="stack-items">
+                <div class="stack-item" data-tooltip="Figma">
+                  <div class="stack-icon figma">
+                    <i class="fa-brands fa-figma"></i>
+                  </div>
+                  <span>Figma</span>
+                </div>
+                <div class="stack-item" data-tooltip="Canva">
+                  <div class="stack-icon canva">
+                    <svg
+                      viewBox="0 0 32 32"
+                      fill="currentColor"
+                      width="26"
+                      height="26"
+                    >
+                      <path
+                        d="M16 2C8.28 2 2 8.28 2 16s6.28 14 14 14 14-6.28 14-14S23.72 2 16 2zm3.2 19.6c-.56.28-1.12.4-1.72.4-.8 0-1.48-.24-2.04-.72-.28.2-.6.36-.96.48-.36.12-.76.2-1.2.2-.84 0-1.52-.28-2.04-.84s-.76-1.28-.76-2.16c0-.6.12-1.24.36-1.92.24-.68.6-1.32 1.08-1.92.48-.6 1.04-1.08 1.68-1.44.64-.36 1.32-.56 2.04-.56.44 0 .84.08 1.2.24.36.16.64.4.88.72.24-.56.6-1 1.04-1.32.44-.32.92-.48 1.48-.48.48 0 .88.12 1.2.36.32.24.52.56.6.96.08.4.04.84-.1 1.32-.14.48-.4.92-.8 1.32l-.8.8c.04.2.06.4.06.6 0 .72-.16 1.36-.48 1.92s-.76 1-.36 1.32z"
+                      />
+                    </svg>
+                  </div>
+                  <span>Canva</span>
+                </div>
+                <div class="stack-item" data-tooltip="Adobe Photoshop">
+                  <div class="stack-icon photoshop">
+                    <span
+                      style="
+                        font-size: 11px;
+                        font-weight: 700;
+                        letter-spacing: -0.5px;
+                      "
+                      >Ps</span
+                    >
+                  </div>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ PROJETOS ═══════════════════════════════ -->
+      <section
+        id="projetos"
+        class="projetos section"
+        aria-labelledby="projetos-title"
+      >
+        <div class="container">
+          <div class="section-label" data-i18n="projects.label">
+            // Projetos
+          </div>
+          <h2
+            id="projetos-title"
+            class="section-title reveal"
+            data-i18n="projects.title"
+          >
+            Em Breve
+          </h2>
+
+          <div class="projetos-soon reveal">
+            <div class="soon-visual" aria-hidden="true">
+              <div class="soon-orbit">
+                <div class="soon-planet"></div>
+                <div class="soon-moon"></div>
+              </div>
+              <div class="soon-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="soon-text">
+              <h3 data-i18n="projects.comingTitle">
+                Projetos chegando em breve
+              </h3>
+              <p data-i18n="projects.comingDesc">
+                Estou construindo e refinando meus projetos com muito cuidado.
+                Em breve você poderá ver casos reais de design acessível,
+                interfaces bonitas e código limpo.
+              </p>
+              <div class="soon-badges">
+                <span class="badge"
+                  ><i class="fa-solid fa-paintbrush"></i> Design</span
+                >
+                <span class="badge"
+                  ><i class="fa-solid fa-universal-access"></i>
+                  <span data-i18n="tag.access">Acessibilidade</span></span
+                >
+                <span class="badge"
+                  ><i class="fa-solid fa-code"></i> Frontend</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════ CONTATO ═══════════════════════════════ -->
+      <section
+        id="contato"
+        class="contato section"
+        aria-labelledby="contato-title"
+      >
+        <div class="container">
+          <div class="section-label" data-i18n="contact.label">// Contato</div>
+          <h2
+            id="contato-title"
+            class="section-title reveal"
+            data-i18n="contact.title"
+          >
+            Vamos conversar?
+          </h2>
+
+          <div class="contato-grid">
+            <!-- Formulário -->
+            <div class="contato-form-wrap reveal">
+              <form
+                class="contato-form"
+                id="contactForm"
+                novalidate
+                aria-label="Formulário de contato"
+              >
+                <div class="form-group">
+                  <label for="nome" data-i18n="form.name">Nome</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    autocomplete="name"
+                    data-i18n-placeholder="form.namePH"
+                    placeholder="Seu nome completo"
+                  />
+                  <span class="field-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    data-i18n-placeholder="form.emailPH"
+                    placeholder="seu@email.com"
+                  />
+                  <span class="field-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="mensagem" data-i18n="form.message"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    required
+                    data-i18n-placeholder="form.messagePH"
+                    placeholder="Olá, Luana! Gostaria de..."
+                  ></textarea>
+                  <span class="field-error" role="alert"></span>
+                </div>
+                <button type="submit" class="btn-primary form-submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span data-i18n="form.send">Enviar mensagem</span>
+                </button>
+                <div
+                  class="form-success"
+                  id="formSuccess"
+                  role="status"
+                  aria-live="polite"
+                  hidden
+                >
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="form.success"
+                    >Mensagem enviada! Em breve estarei em contato.</span
+                  >
+                </div>
+              </form>
+            </div>
+
+            <!-- Info de contato -->
+            <div class="contato-info reveal">
+              <div class="contato-links">
+                <a
+                  href="mailto:luanagabrielle226@gmail.com"
+                  class="contact-link"
+                  aria-label="Enviar email"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">Email</span>
+                    <span class="contact-link-value"
+                      >luanagabrielle226@gmail.com</span
+                    >
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/luanagpaes"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-link"
+                  aria-label="GitHub"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">GitHub</span>
+                    <span class="contact-link-value">luanagpaes</span>
+                  </div>
+                </a>
+                <a
+                  href="https://www.instagram.com/luagabrielleg/"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-link"
+                  aria-label="Instagram"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">Instagram</span>
+                    <span class="contact-link-value">@luagabrielleg</span>
+                  </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/luana-paes-bba22a321/"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-link"
+                  aria-label="LinkedIn"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">LinkedIn</span>
+                    <span class="contact-link-value">luana-paes</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- QR Code WhatsApp -->
+              <div class="qr-wrap" aria-label="QR Code para WhatsApp">
+                <div class="qr-inner">
+                  <canvas
+                    id="qrCanvas"
+                    width="140"
+                    height="140"
+                    role="img"
+                    aria-label="QR Code WhatsApp Luana Paes"
+                  ></canvas>
+                  <div class="qr-label">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span data-i18n="contact.whatsapp">WhatsApp</span>
+                  </div>
+                </div>
+                <p class="qr-hint" data-i18n="contact.qrHint">
+                  Escaneie para conversar no WhatsApp
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <span class="logo"
+              ><span class="logo-l">L</span
+              ><span class="logo-dot">.</span></span
+            >
+            <p data-i18n="footer.made">
+              Feito com <i class="fa-solid fa-heart" aria-hidden="true"></i> e
+              muito café
+            </p>
+          </div>
+          <p class="footer-copy">
+            © 2026 Luana Paes.
+            <span data-i18n="footer.rights">Todos os direitos reservados.</span>
+          </p>
+          <div class="footer-social" aria-label="Redes sociais">
+            <a
+              href="https://github.com/luanagpaes"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/luana-paes-bba22a321/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/luagabrielleg/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- QR lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
